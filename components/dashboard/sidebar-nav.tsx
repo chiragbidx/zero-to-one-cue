@@ -9,6 +9,8 @@ import {
   Hammer,
   Settings,
   Users,
+  Globe,
+  PlusCircle,
 } from "lucide-react";
 import {
   Collapsible,
@@ -25,20 +27,16 @@ type NavItem = {
 
 const sections: { title: string; items: NavItem[] }[] = [
   {
-    title: "Platform",
+    title: "Navigation",
     items: [
-      { label: "Overview", href: "/dashboard", icon: Home },
-      {
-        label: "Feature",
-        href: "/dashboard/feature",
-        icon: Hammer,
-      },
+      { label: "Overview", href: "/dashboard/overview", icon: Home },
+      { label: "My Websites", href: "/dashboard/websites", icon: Globe },
+      { label: "Create Website", href: "/dashboard/websites/create", icon: PlusCircle },
     ],
   },
   {
     title: "Account",
     items: [
-      { label: "Team", href: "/dashboard/team", icon: Users },
       { label: "Settings", href: "/dashboard/settings", icon: Settings },
     ],
   },
